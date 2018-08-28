@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/item_des"
+    android:layout_height="match_parent"
+    tools:context="com.example.hp.dellhackathon.ItemDes"><RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:id="@+id/des_image"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/des_name"
+        android:layout_width="53dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/des_image"
+        android:layout_centerHorizontal="true"
+        android:text="name"
+
+        android:textColor="#000"
+        android:textSize="20dp" />
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="30dp"
+       android:id="@+id/item_layout"
+       android:layout_below="@+id/des_name"
+       android:orientation="vertical"
+       android:layout_marginLeft="20dp">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Price"
+           android:textColor="#000"
+           android:textSize="18dp"
+           android:id="@+id/des_price"/>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/des_des"
+           android:textColor="#000"
+           android:layout_marginTop="10dp"
+           android:text="description"/>
+           <RadioButton
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/del_type"
+               android:text="Do you want fast delivery?"/>
+
+
+   </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/item_layout"
+      android:layout_marginTop="30dp"
+      android:id="@+id/eta"
+      android:layout_centerHorizontal="true">
+
+    <EditText
+        android:layout_width="200dp"
+        android:id="@+id/city_name"
+        android:hint="Enter your city name"
+        android:layout_height="wrap_content"/>
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="50dp"
+    android:id="@+id/des_btn"
+    android:background="@drawable/button"
+    android:text="Find ETA"/>
+  </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/place_order"
+        android:text="Place order"
+        android:background="@drawable/button"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/eta"
+        android:layout_centerHorizontal="true"/></RelativeLayout>
+    <include layout="@layout/activity_bottom_sheet" />
+</android.support.design.widget.CoordinatorLayout>

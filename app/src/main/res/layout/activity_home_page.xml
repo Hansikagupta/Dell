@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--android.support.v4.widget.DrawerLayout-->  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/func"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.hp.dellhackathon.HomePage">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#24b">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dell.com"
+            android:textSize="25dp"
+            android:textColor="#fff"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp"
+            android:textStyle="italic"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/logout"
+            android:src="@drawable/imagess"
+            android:layout_alignParentRight="true"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/order"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/order"
+            android:layout_toLeftOf="@+id/logout"/>
+    </RelativeLayout>
+
+    <!--<android.support.design.widget.NavigationView
+        app:headerLayout="@layout/profile"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#DCDCDC"
+        app:itemIconTint="#fff"
+        app:itemTextColor="#000"
+        app:menu="@menu/drawermenu"
+        android:id="@+id/nav"
+        android:layout_gravity="start">
+    </android.support.design.widget.NavigationView>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/item">
+    </android.support.v7.widget.RecyclerView>
+   />
+</LinearLayout>

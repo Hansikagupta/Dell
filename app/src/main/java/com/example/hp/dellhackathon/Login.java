@@ -38,7 +38,12 @@ public class Login extends AppCompatActivity {
         pass=(EditText)findViewById(R.id.pa);
         signup=(TextView)findViewById(R.id.signup);
         firebaseAuth= FirebaseAuth.getInstance();
-        firebaseAuth= FirebaseAuth.getInstance();
+        if(firebaseAuth.getCurrentUser()!=null)
+        {
+            final Intent intent=new Intent(Login.this,HomePage.class);
+            startActivity(intent);
+            finish();
+        }
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,8 +64,9 @@ public class Login extends AppCompatActivity {
                         if (task.isSuccessful()){
                             FirebaseUser user = firebaseAuth.getCurrentUser();
                             Intent intent8= new Intent(Login.this,HomePage.class);
-                            startActivity(intent8);
                             finish();
+                            startActivity(intent8);
+
                         }
                         else{
 
